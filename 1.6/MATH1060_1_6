@@ -1,0 +1,275 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Template
+% LaTeX Template
+% By: Ryan Grove, Jaman
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+%\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\cfoot{\thepage\ of \pageref{LastPage}}
+
+\def\v{\hbox{$\mathbf v$}}
+\def\w{\hbox{$\mathbf w$}}
+\def\u{\hbox{$\mathbf u$}}
+\def\x{\hbox{$\textbf{x}$}}
+\def\z{\hbox{$\mathbf z$}}
+\def\a{\hbox{$\mathbf a$}}
+\def\b{\hbox{$\mathbf b$}}
+\def\L{\hbox{$\mathcal L$}}
+\def\C{\hbox{$\mathbb C$}}
+\def\B{\hbox{$\mathcal B$}}
+\def\R{\hbox{$\mathbb R$}}
+\def\X{\hbox{$\underline X$}}
+\def\Q{\hbox{$\mathbb Q$}}
+\def\R{\hbox{$\mathbb R$}}
+\def\N{\hbox{$\mathbb N$}}
+\def\C{\hbox{$\mathbb C$}}
+\def\0{\hbox{$\mathbf 0$}}
+\def\Y{\hbox{$\underline Y$}}
+\def\a{\hbox{$\mathbf a$}}
+\def\u{\hbox{$\mathbf u$}}
+\def\w{\hbox{$\mathbf w$}}
+\def\y{\hbox{$\mathbf y$}}
+\def\X{\hbox{$\underline X$}}
+\def\dd{\hbox{$\partial $}}
+\def\B{\hbox{$\mathcal B$}}
+\def\F{\hbox{$\mathcal F$}}
+\def\L{\hbox{$\mathcal L$}}
+\def\M{\hbox{$\mathcal M$}}
+\def\D{\hbox{$\mathscr {D}$}}
+\def\RR{\hbox{$\mathscr{R}$}}
+\def\I{\hbox{$\mathcal I$}}
+
+\usepackage{amssymb}
+%\theoremstyle{plain}
+\usepackage[margin = .75in]{geometry}
+\newtheorem{claim}{Claim}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{problem}[theorem]{Problem}
+%\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+%\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\e}{\varepsilon}
+\newcommand{\bbf}{\textbf}
+\newcommand{\p}{\parallel}
+\usepackage{color}
+\newcommand{\field}[1]{\mathbb{#1}}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{cancel}
+\usepackage{upgreek}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{cases}
+\usepackage{mathrsfs}
+\usepackage{rotating}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{Jaman, Clemson University, MATH1060 - 212} \\ [25pt] % Your name, university, class
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Section 1.6: Inverse Functions and Logarithms \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Date:} % The due date
+
+\date{\normalsize August 19, 2016} % A custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+\begin{flushleft}
+\begin{tabular}{l l}
+Name: \rule{3.2in}{.01cm}  & {}%Table number: \rule{1in}{.01cm}\\
+\end{tabular}
+\end{flushleft}
+
+%----------------------------------------------------------------------------------------
+%	Lecture
+%----------------------------------------------------------------------------------------
+
+\section*{\textbf{Lecture:}}
+\subsection{Inverse Functions}
+Table 1 gives data from an experiment in which a bacteria culture started with 100 bacteria in a limited nutrient medium; the size of the bacteria population was recorded at hourly intervals. The number of bacteria $N$ is a function of the time $t: \hspace{1mm}N=f(t)$.\\
+Suppose however, that the biologist changes her point of view and becomes interested in the time required for the population to reach various levels. In other words, she is thinking of $t$ as a function of $N$. This function is called the \underline{\hspace{1in}} \underline{\hspace{1in}} of $f$, denoted by $f^{-1}$, and read "$f$ inverse". Thus $t=f^{-1}(N)$ is the time required for the population level to reach $N$. Find $f^{-1}(550)=$\underline{\hspace{.25in}}  as $f(\underline{\hspace{.25in}})=550$.
+\[\includegraphics[scale=0.5]{fig161.png}\] 
+Do all function posses inverses? \underline{\hspace{1in}}\\
+\[\includegraphics[scale=0.5]{fig162.png}\]
+\fbox{
+  \parbox{\textwidth}{
+  \vspace{5pt} \textbf{Definition of \textbf{One-to-one function}:} A function $f$ is called \textbf{One-to-one function} if it never takes on the same value twice; that is\\
+  
+  \[\underline{\hspace{2.25in}}\]
+  \indent
+  
+  }}
+  \[\includegraphics[scale=0.75]{fig163.png}\]
+  \fbox{
+    \parbox{\textwidth}{
+    \vspace{5pt} \textbf{ \textbf{Horizontal Line Test}:} A function is One-to-one if and only if no horizontal line intersects its graph more than once.
+    
+    }}
+    \indent
+    
+    \vspace{2mm}
+ \underline{Example 1}: Is the function $f(x)=x^3$ one-to-one?\\
+  \indent\\
+  \indent
+  
+  
+  
+\vspace{1in}
+\underline{Example 2}: Is the function $f(x)=x^4$ one-to-one?\\
+    \indent\\
+    \indent
+    
+    
+    
+    \vspace{1in}
+\fbox{
+  \parbox{\textwidth}{
+  \vspace{5pt} \textbf{1 Definition of \textbf{inverse function}:} Let $f$ be a one-to-one function with domain $A$ and range $B$. Then its \underline{\hspace{1in}} $f^{-1}$ has domain $B$ and range $A$ and is defined by\\
+  $$f^{-1}(y)=x\hspace{2mm}\Longleftrightarrow\hspace{2mm} f(x)=y$$
+  for any $y$ in $B$.
+  \indent
+  
+  }}
+  \indent\\
+  \textcolor{red}{Do not mistake the $-1$ in $f^{-1}$ for an exponent. Thus $$ f^{-1}(x)\hspace{1mm} \text{does not mean} \hspace{2mm}\frac{1}{f(x)}$$}
+  
+  \underline{Example 3}: If $f(1)=5$, $f(3)=7$, and $f(8)=-10$, find $f^{-1}(7)$, $f^{-1}(5)$ and $f^{-1}(-10)$.\\
+    \indent\\
+    \indent
+ \[\includegraphics[scale=0.75]{fig164.png}\]
+\fbox{
+  \parbox{\textwidth}{
+   $$f^{-1}(f(x))=x\hspace{2mm}\text{for every}\hspace{1mm} x\hspace{1mm}\text{in}\hspace{1mm} A$$
+  $$f(f^{-1}(x))=x\hspace{2mm}\text{for every}\hspace{1mm} x\hspace{1mm}\text{in}\hspace{1mm} B$$  
+  }}
+  \indent\\
+Now lets see how to compute inverse functions. If we have a function $y=f(x)$ and are able to solve this equation for $x$ interms of $y$, then according to the first definition we must have $x=f^{-1}(y)$.\\\\
+\fbox{
+  \parbox{\textwidth}{\textcolor{red}{How to Find the Inverse Function of a One-to-One Function $f$}\\\\
+ Step 1: Write $y=f(x)$\\
+ Step 2: Solve the equation for $x$ in terms of $y$ (if possible).\\
+ Step 3: To express $f^{-1}$ as a function of $x$, interchange $x$ and $y$. The resulting equation is $y=f^{-1}(x).$ 
+  }}
+  \indent\\
+  
+  \underline{Example 4}: Find the inverse function of $f(x)=1+\sqrt{2+3x}$.\\
+      \indent\\
+      \indent\\\\\\\\\\
+  \vspace{2in}
+\fbox{
+  \parbox{\textwidth}{
+   The graph of $f^{-1}$ is obtained by reflecting the graph of $f$ about the line $y=x$.  
+  }}
+  \indent\\
+ \underline{Example 5}: Sketch the graphs of $f(x)=\sqrt{-1-x}$ and its inverse function using the same coordinate axes.
+ \newpage
+ \subsection{Logarithmic Functions}
+ If $a>0$ and $a\neq 1$, the exponential function $f(x)=a^x$ is either increasing or decreasing and so it is one-to-one by the \underline{\hspace{1in}} Test. It is therefore has an inverse function $f^{-1}$, which is called the \underline{\hspace{1in}} \underline{\hspace{1in}}\textbf{with base a} and is denoted by $\log_a$.
+ \vspace{2mm}\\
+ \fbox{
+   \parbox{\textwidth}{
+   \vspace{5pt} 
+   $$f^{-1}(x)=y\hspace{2mm}\Longleftrightarrow\hspace{2mm} f(y)=x$$
+   $$\log_ax=y\Longleftrightarrow a^y=x$$
+   $$\log_a(a^x)=x\hspace{2mm}\text{for every}\hspace{2mm}x\in\mathbb{R}$$
+   $$a^{\log_ax}=x\hspace{2mm}\text{for every}\hspace{2mm}x>0$$
+     }}
+     \[\includegraphics[scale=0.75]{fig165.png}\includegraphics[scale=0.75]{fig166.png}\]
+\underline{Example 6}: Use the laws of logarithms to evaluate $\log_3100-\log_318-\log_350$\\
+    \indent\\
+    \indent
+\subsection{Natural Logarithms}
+The logarithm with base $e$ is called the \underline{\hspace{1in}} \underline{\hspace{1in}} and has a special notation:
+$$\log_ex=\ln x$$
+$$\ln x=y\hspace{2mm}\Longleftrightarrow\hspace{2mm} e^y=x$$
+
+\fbox{
+   \parbox{\textwidth}{
+   \vspace{5pt} 
+   $$\ln (e^x)=x\hspace{2mm} x\in\mathbb{R}$$
+   $$e^{\ln x}=x\hspace{2mm} x>0$$
+     }}
+     \indent\\
+In particular, if we set $x=1$, we have $\ln e=1$\\\\
+\underline{Example 7}: Solve the equation $e^{5-3x}=10$\\
+    \indent\\
+    \vspace{1in}
+    \newpage
+    \fbox{
+       \parbox{\textwidth}{
+       \vspace{5pt} Change of Base Formula: For any positive number $a\hspace{2mm}(a\neq 1)$, we have
+       $$\log_ax=\frac{\ln x}{\ln a}$$
+         }}
+         \indent\\\\
+\underline{Example 8}: Sketch the graph of the function $y=\ln(x-2)-1$\\
+             \indent\\
+             \vspace{2in}
+             \\
+The trig functions are not one-to-one so we restrict their domains to make the restricted functions one-to-one. Then the inverse trig functions exist.\\\\ Two notations: $\sin^{-1}x=\arcsin x$
+\\
+\underline{Example 9}: Evaluate the following:\\\\
+a. $\sin^{-1}0=$\\\\\\b. $\arcsin(1)=$\\\\\\c. $\sin^{-1}\frac{\sqrt{3}}{2}=$
+             \vspace{2in}
+             \\
+%----------------------------------------------------------------------------------------
+
+\end{document}
